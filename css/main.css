@@ -1,0 +1,1013 @@
+/*! HTML5 Boilerplate v5.0.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1rem;
+    line-height: 1.4;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* font-family: 'Lobster', cursive; */
+/* font-family: 'Ubuntu', sans-serif; */
+
+html {
+    font-size: 80%;
+} 
+body {
+    color: #030303;
+    position: relative;
+}
+.container {
+    min-width: 320px;
+    margin: 0 auto;
+}
+.container.__wide {
+    width: 100%;
+}
+.section {
+    min-width: 320px;
+}
+.row {
+    padding: 0 10px;   
+}
+p {
+    margin: 0 0 15px 0;
+}
+p + p {
+    margin: 15px 0;
+}
+
+
+/* ==========================================================================
+   Главное меню
+   ========================================================================== */
+.menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: none;
+}
+.menu.__open {
+    display: block;
+}
+.menu a {
+    color: #030303;
+    text-decoration: none;
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid #b2260f;
+    padding: 0.3rem;
+}
+.menu .active a,
+.menu a:hover {
+    color: #fff;
+}
+.menu_btn {
+    background: transparent;
+    border-radius: 0px;
+    border: 0px;
+    width: 45px;
+    float: right;
+    margin-top: 13px;
+}
+.menu_btn span {
+    display: block;
+    background: #030303;
+    border-radius: 5px;
+    height: 4px;
+}
+.menu_btn span + span {
+    margin-top: 3px;
+}
+.menu_btn.__open span {
+    background: #941305;
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.2);
+}
+
+/* ==========================================================================
+   Иконки
+   ========================================================================== */
+.ico {
+    display: inline-block;
+    vertical-align: middle;
+}
+.ico.__helmet {
+    width: 23px;
+    height: 21px;
+    background: url(../img/helmet.png) no-repeat;
+}
+.ico.__phone {
+    width: 51px;
+    height: 51px;
+    background: url(../img/phone.png) no-repeat;
+}
+.ico.__mobile {
+    width: 51px;
+    height: 51px;
+    background: url(../img/mobile.png) no-repeat;
+}
+
+/* ==========================================================================
+   Заголовок страницы
+   ========================================================================== */
+.header_logo {
+    font-family: 'Lobster', cursive;
+    font-size: 2.5rem;
+}
+.header {
+    background: #d1280f;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* ==========================================================================
+   Слайдер
+   ========================================================================== */
+.banner {
+    margin-top: 44.8px;
+}
+.slider {
+    position: relative;
+    height: 31.3rem;
+}
+.slides, .control_nav, .direction_nav {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+} 
+.slides {
+    position: relative;
+}
+.slide {
+    transition: opacity 0.5s;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+}
+.slide.active {
+    opacity: 1;
+}
+.direction_nav {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -24px;
+}
+.direction_nav li {
+    width: 17px;
+    height: 48px;
+    background-image: url(../img/arrow.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.5;
+}
+.direction_nav li:hover {
+    opacity: 1;
+}
+.direction_nav .before {
+    background-position: left top;
+    left: 15px;
+    top: 0;
+}
+.direction_nav .next {
+    background-position: right top;
+    right: 15px;
+    top: 0;
+}
+.control_nav {
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    width: 100%;
+    z-index: 20;
+}
+.control_nav li {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(116,125,144,0.5);
+    vertical-align: middle;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.control_nav li:hover {
+    background: rgba(116,125,144,1);
+}
+.control_nav li.active {
+    background: rgba(116,125,144,1);
+    width: 10px;
+    height: 10px;
+}
+.slide_content {
+    height: 31.3rem;
+    margin: 0 auto;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    font-weight: 300;
+}
+.slide_content.__slide1 {
+    background-image: url(../img/slider/slide2.jpg);
+}
+.slide_content.__slide2 {
+    background-image: url(../img/slider/slide1.jpg);
+}
+.slide_caption {
+    font-size: 2.75rem;
+    text-align: center;
+    padding: 0 10px;
+}
+.slide_tel {
+    font-size: 2.1rem;
+    white-space: nowrap;
+    padding: 0 10px;
+}
+.slide_tel_item + .slide_tel_item {
+    margin-top: 12px;
+}
+.direction_nav_wrap {
+    height: 31.3rem;
+    position: relative;
+    z-index: 10;
+}
+
+
+/* ==========================================================================
+   О нас
+   ========================================================================== */
+.about_inner {
+    padding-bottom: 195px;
+    background-image: url(../img/bike.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 15% bottom;
+}
+
+
+/* ==========================================================================
+   Загововки
+   ========================================================================== */
+.section_title {
+    font-family: 'Lobster', cursive;
+    font-size: 2.5rem;
+    text-align: center;
+    white-space: nowrap;
+    padding: 3.3rem 0 2.8rem;
+    overflow: hidden;
+}
+.section_title_decor:before,
+.section_title_decor:after {
+    content: " ";
+    display: inline-block;
+    width: 70px;
+    height: 27px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.section_title_decor:before {
+    margin-right: 3px;
+}
+.section_title_decor:after {
+    margin-left: 3px;
+}
+.__wings .section_title_decor:before {
+    background-image: url(../img/title/wing__left.png);
+}
+.__wings .section_title_decor:after {
+    background-image: url(../img/title/wing__right.png);
+}
+.__parts .section_title_decor:before {
+    background-image: url(../img/title/parts__left.png);
+}
+.__parts .section_title_decor:after {
+    background-image: url(../img/title/parts__right.png);
+}
+.__outfit .section_title_decor:before {
+    background-image: url(../img/title/ekip__left.png);
+}
+.__outfit .section_title_decor:after {
+    background-image: url(../img/title/ekip__right.png);
+}
+.__scheme .section_title_decor:before {
+    background-image: url(../img/title/ship__left.png);
+}
+.__scheme .section_title_decor:after {
+    background-image: url(../img/title/ship__right.png);
+}
+.__faq .section_title_decor:before {
+    background-image: url(../img/title/faq__left.png);
+}
+.__faq .section_title_decor:after {
+    background-image: url(../img/title/faq__right.png);
+}
+
+
+
+/* ==========================================================================
+   Экиперовка
+   ========================================================================== */
+.outfit {
+    background: #941305;
+    padding-bottom: 3.3rem;
+    overflow: hidden;
+}
+.outfit .container {
+    position: relative;
+    min-height: 660px;
+}
+.outfit_bots {
+    bottom: -86px;
+    left: -199px;
+    opacity: 0.6;
+    position: absolute;
+}
+.outfit_biker {
+    bottom: -93px;
+    opacity: 0.6;
+    position: absolute;
+    right: -192px;
+}
+.num_list {
+    margin: 0 auto 2rem auto;
+    padding: 0;
+    list-style-type: none;
+    font-size: 1.1rem;
+    position: relative;
+}
+.num_decor {
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.num_decor span {
+    display: table-cell;
+    vertical-align: middle;
+    font-style: normal;
+    text-align: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 1px solid #030303;
+    border-radius: 100%;
+}
+.num_text {
+    position: relative;
+    display: block;
+    padding: 0.4rem 0 1rem 3rem;
+}
+
+
+/* ==========================================================================
+   FAQ
+   ========================================================================== */
+.faq {
+    background: url(../img/background_bike.jpg) no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    padding-bottom: 3.3rem;
+}
+.faq_list {
+    padding-left: 2rem;
+    font-size: 1.4rem;
+    margin: 0 0 2rem;
+}
+.faq_item + .faq_item {
+    margin-top: 1.3rem;
+}
+.faq_question {
+    display: inline-block;
+    border-bottom: 1px dashed #fff;
+    cursor: pointer;
+    vertical-align: top;
+}
+.faq_item:hover,
+.faq_item.__active {
+    color: #145b9c;
+}
+.faq_item:hover .faq_question,
+.__active .faq_question {
+    border-bottom: 1px dashed #145b9c;
+    color: #145b9c;
+}
+.faq_answer {
+    display: none;
+    font-size: 1rem;
+}
+.__active .faq_answer {
+    display: block;
+    padding-top: 10px;
+    color: #ffffff;
+}
+
+
+/* ==========================================================================
+   Схема работы
+   ========================================================================== */
+.scheme {
+    background: #145b9c;
+    color: #fff;
+    padding-bottom: 3.3rem;
+}
+.scheme_wrap {
+    max-width: 740px;
+    margin: 0 auto;
+}
+.scheme_item {
+    position: relative;
+    line-height: 1.4rem;
+}
+.scheme_item:before {
+    content: " ";
+    width: 11px;
+    height: 11px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+}
+.scheme_item.__right {
+    width: 50%;
+    float: right;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+.scheme_item.__right:before {
+    left: -6px;
+    bottom: -5px;
+}
+.scheme_item.__left:before {
+    right: -6px;
+    bottom: -5px;
+}
+.scheme_item.__left {
+    position: relative;
+    width: 50%;
+    float: left;
+    left: -1px;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+.scheme_item b {
+    font-size: 1.9rem;
+}
+.scheme_inner {
+    padding: 3rem 0.5rem 0.2rem 1rem;
+}   
+
+
+/* ==========================================================================
+   Услуги
+   ========================================================================== */
+.service {
+    background: url(../img/background_parts.jpg);
+    color: #fff;
+    padding-bottom: 3.3rem;
+}
+.service_list {
+    margin: 0 auto;
+    max-width: 760px;
+    padding: 0;
+    list-style-type: none;
+}
+.service_wrap {
+    margin-bottom: 15px;
+}
+.service_item {
+    padding: 0 10px;
+}
+.service_ico img {
+    display: block;
+    width: 100%;
+    max-width: 318px;
+    margin: 0 auto;
+}
+.service_caption {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+}
+.service_description {
+    font-size: 0.875rem;
+    margin: 5px 0;
+}
+.service_more {
+    text-align: right;
+}
+
+
+/* ==========================================================================
+   Карта
+   ========================================================================== */
+.map {
+    height: 400px;
+    position: relative;
+}
+.map .row {
+    position: relative;
+}
+.map_wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 400px;
+    width: 100%;
+}
+.map_contact {
+    padding: 3.3rem 0 0 0;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.map_inner {
+    padding: 1rem;
+    background: rgba(123,123,123,0.5);
+}
+.map_logo {
+    font-family: 'Lobster', cursive;
+    font-size: 3.4rem;
+    line-height: 2.5rem;
+    margin-bottom: 1.5rem; 
+    text-align: center;
+}
+
+/* ==========================================================================
+   Форма
+   ========================================================================== */
+.form_wrap {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+    position: relative;
+}
+.form_row {
+    margin-bottom: 15px;
+}
+.form_control {
+    width: 90%;
+    padding: 5px 5%;
+    border-radius: 8px;
+    background: transparent;
+    border: 2px solid #fff;
+    height: 26px;
+    font-size: 1rem;
+}
+
+select.form_control {
+    height: 44px;
+    width: 101.2%;
+    position: relative;
+}
+select.form_control option {
+    background: #000;
+    padding: 5px 5%;
+}
+textarea.form_control {
+    height: 90px;
+}
+.btn {
+    background: #fff;
+    color: #000;
+    border: 0px;
+    font-size: 1rem;
+    padding: 5px 17px;
+    height: 40px;
+    border-radius: 8px;
+}
+.btn:hover {
+    opacity: 0.7;
+}
+.form div.error {
+    font-size: 0.875rem;
+    color: #a50000;
+}
+.form_answer {
+    margin: 0 0 10px 0;
+}
+.form_answer.__success {
+    text-align: center;
+    color: #50832B;
+}
+.form_answer.__error {
+    text-align: center;
+    color: #a50000;
+}
+.text_center {
+    text-align: center;
+}
+
+.__dark .form_control {
+    border: 2px solid #030303;
+}
+.__dark .btn {
+    background: #030303;
+    color: #fff;
+}
+.__dark .form div.error {
+    color: #000;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer {
+    background: #030303;
+    color: #fff;
+    position: relative;
+}
+.footer_inner {
+    padding: 2rem 0 1.5rem 0;
+}
+.qwerty a {
+    color: #d1280f;
+}
+
+
+/* ==========================================================================
+   Медиа запросы
+   ========================================================================== */
+@media (min-width: 768px) {
+    html {
+        font-size: 90%;
+    }
+    .row {
+        padding: 0 15px;   
+    }
+    .container {
+        width: 768px;
+    }
+    .des_hidden {
+        display: none;
+    }
+    .header {
+        height: 3.8rem;
+    }
+    .header_logo {
+        font-size: 3rem;
+        line-height: 3.1rem;
+        display: block;
+        float: left;
+        width: 32.97%;
+    }
+    .menu {
+        display: block;
+    }
+    .menu {
+        float: right;
+        width: 67%;
+    }
+    .menu a {
+        font-size: 1.125rem;
+        border-bottom: none;
+        white-space: nowrap;
+        padding: 0.97rem 0.3rem;
+    }
+    .menu .active a,
+    .menu a:hover {
+        color: #030303;
+        text-decoration: underline;
+    }
+    .menu_item {
+        display: table-cell;
+        width: 14.285714285%;
+    }
+    .banner {
+        margin-top: 3.8rem;
+    }
+    .slide_caption {
+        padding: 65px;
+        text-align: left;
+        width: 80%;
+    }
+    .slide_tel {
+        padding-left: 65px;
+        font-size: 2.75rem;
+    }
+    .section_title_decor:before,
+    .section_title_decor:after {
+        width: 140px;
+        height: 54px;
+    }
+    .service_wrap {
+        width: 50%;
+        float: left;
+    }
+    .num_list {
+        width: 500px;
+    }
+    .outfit_bots {
+        opacity: 1;
+        bottom: -60px;
+        left: -46px;
+    }
+    .outfit_biker {
+        opacity: 1;
+        right: -135px;
+    }
+    .map {
+        height: 700px;
+    }
+    .map_wrap {
+        height: 700px;
+    }
+    .copy {
+        text-align: center;
+    }
+    .qwerty {
+        position: absolute;
+        right: 1rem;
+        top: 2rem;
+        margin: 0;
+    }
+}
+
+@media (min-width: 970px) {
+    html {
+        font-size: 100%;
+    }
+    .container {
+        width: 970px;
+    }
+    .slide_caption {
+        padding: 65px;
+        text-align: left;
+        width: 50%;
+    }
+    .outfit {
+        overflow: inherit;
+    }
+    .outfit_bots {
+        bottom: -97px;
+        left: -17px;
+    }
+    .outfit_biker {
+        right: 0;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ * http://juicystudio.com/article/screen-readers-display-none.php
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
