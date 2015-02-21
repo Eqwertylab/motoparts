@@ -9,6 +9,8 @@ var App = {
       App.Func.slider();                                            // Слайдер новостей
       App.Func.form_valid();                                        // Валидация формы
       App.Func.form_send('#form_parts');                            // Функция отпраки формы
+      App.Func.form_send('#form_outfit');                           // Функция отпраки формы
+      App.Func.form_send('#form_faq');                              // Функция отпраки формы
       App.Func.menu();                                              // Главное меню
       App.Func.colapse('.faq_item','.faq_question','.faq_answer');  // Раздел faq
       App.Func.map();                                               // Карта
@@ -26,6 +28,12 @@ var App = {
 
     smoof_scroll: function() {
       
+      $('#menu_out').find('a').smoothScroll({
+
+        offset: -50
+
+      });
+
     }, // <<<--- / smoof_scroll
 
     menu_scroll: function() {
