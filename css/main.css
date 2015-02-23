@@ -189,12 +189,12 @@ p + p {
 .ico.__phone {
     width: 51px;
     height: 51px;
-    background: url(../img/phone.png) no-repeat;
+    background: url(../img/phone_w.png) no-repeat;
 }
 .ico.__mobile {
     width: 51px;
     height: 51px;
-    background: url(../img/mobile.png) no-repeat;
+    background: url(../img/mobile_w.png) no-repeat;
 }
 
 /* ==========================================================================
@@ -250,7 +250,7 @@ p + p {
 .direction_nav li {
     width: 17px;
     height: 48px;
-    background-image: url(../img/arrow.png);
+    background-image: url(../img/arrow_w.png);
     background-repeat: no-repeat;
     position: absolute;
     cursor: pointer;
@@ -302,6 +302,8 @@ p + p {
     background-size: cover;
     background-position: center top;
     font-weight: 300;
+    color: #fff;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
 }
 .slide_content.__slide1 {
     background-image: url(../img/slider/slide2.jpg);
@@ -393,10 +395,10 @@ p + p {
     background-image: url(../img/title/ship__right.png);
 }
 .__faq .section_title_decor:before {
-    background-image: url(../img/title/faq__left.png);
+    background-image: url(../img/title/faq_d__left.png);
 }
 .__faq .section_title_decor:after {
-    background-image: url(../img/title/faq__right.png);
+    background-image: url(../img/title/faq_d__right.png);
 }
 
 
@@ -460,9 +462,10 @@ p + p {
    FAQ
    ========================================================================== */
 .faq {
-    background: url(../img/background_bike.jpg) no-repeat center center;
+    background: url(../img/background_bike_gray.jpg) no-repeat center center;
+    background-attachment: fixed;
     background-size: cover;
-    color: #fff;
+    color: #000;
     padding-bottom: 3.3rem;
 }
 .faq_list {
@@ -475,27 +478,36 @@ p + p {
 }
 .faq_question {
     display: inline-block;
-    border-bottom: 1px dashed #fff;
+    border-bottom: 1px dashed #000;
     cursor: pointer;
     vertical-align: top;
 }
 .faq_item:hover,
 .faq_item.__active {
-    color: #145b9c;
+
 }
 .faq_item:hover .faq_question,
 .__active .faq_question {
-    border-bottom: 1px dashed #145b9c;
-    color: #145b9c;
+    border-bottom: 1px solid #000;
 }
 .faq_answer {
-    display: none;
-    font-size: 1rem;
+    opacity: 0;
+    height: 0;
+    font-size: 1rem;    
+    border-radius: 8px;
+    background: #747d90;
+    border: 1px solid #636b7b;
+    overflow: hidden;
+    transition: all 0.5s;
 }
 .__active .faq_answer {
-    display: block;
-    padding-top: 10px;
-    color: #ffffff;
+    opacity: 1;
+    height: auto;
+    margin-top: 10px;
+    color: #000;
+}
+.faq_answer_inner {
+    padding: 15px;
 }
 
 
@@ -559,12 +571,13 @@ p + p {
    ========================================================================== */
 .service {
     background: url(../img/background_parts.jpg);
+    background-attachment: fixed;
     color: #fff;
     padding-bottom: 3.3rem;
 }
 .service_list {
     margin: 0 auto;
-    max-width: 760px;
+    max-width: 490px;
     padding: 0;
     list-style-type: none;
 }
@@ -577,7 +590,7 @@ p + p {
 .service_ico img {
     display: block;
     width: 100%;
-    max-width: 318px;
+    max-width: 215px;
     margin: 0 auto;
 }
 .service_caption {
@@ -802,10 +815,10 @@ textarea.form_control {
         right: -135px;
     }
     .map {
-        height: 700px;
+        height: 550px;
     }
     .map_wrap {
-        height: 700px;
+        height: 550px;
     }
     .copy {
         text-align: center;
